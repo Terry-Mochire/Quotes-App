@@ -1,11 +1,11 @@
-<form>
+<form #createQuoteForm ="ngForm">
     <div class="mb-3">
-      <label for="addedQuote" class="form-label">Your Quote: </label>
-      <input type="text" class="form-control" id="addedQuote">
+      <label for="message" class="form-label">Your Quote: </label>
+      <input type="text" class="form-control" id="message" name="message" ngModel>
     </div>
     <div class="mb-3">
       <label for="quoteAuthor" class="form-label">Quote Author</label>
-      <input type="text" class="form-control" id="quoteAuthor">
+      <input type="text" class="form-control" id="quoteAuthor" name="quoteAuthor" ngModel>
     </div>
-    <button type="submit" class="btn btn-primary">Add New Quote</button>
+    <button type="submit" class="btn btn-primary" (click)="onAddQuote(createQuoteForm)">Add New Quote</button>
   </form>
