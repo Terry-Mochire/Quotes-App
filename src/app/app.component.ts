@@ -12,4 +12,6 @@ export class AppComponent {
   onQuoteAdded(quote:Quote) {
     this.storedQuotes.push(quote)
   }
+
+
 }
