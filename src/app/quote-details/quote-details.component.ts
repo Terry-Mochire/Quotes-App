@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { retry } from 'rxjs';
 import { Quote } from '../quote';
 @Component({
   selector: 'app-quote-details',
@@ -11,6 +12,18 @@ export class QuoteDetailsComponent implements OnInit {
   @Output() deleteQuote = new EventEmitter<boolean>();
   delete(complete: boolean){
     this.deleteQuote.emit(complete);
+  }
+
+  addLike(like: number){
+    this.newSingleQuote.upvote += 1
+    return like
+  }
+
+  
+    
+  addDislike(dislike: number){
+    this.newSingleQuote.downvote += 1
+    return dislike
   }
   
   constructor() { }
