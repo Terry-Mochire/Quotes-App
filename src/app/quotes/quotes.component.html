@@ -1,5 +1,5 @@
 <ul *ngFor="let quote of quotes; let i = index">
-    <li>{{quote.quote}}</li>
+    <li appHighlight>{{quote.quote}}</li>
     <button type="submit" class="btn btn-primary" (click)="onEmitQuoteDescription(i)">See More</button>
     <div *ngIf="quote.showDescription">
         <app-quote-details [newSingleQuote]="quote" (deleteQuote)="deleteQuote($event,i)"></app-quote-details>
