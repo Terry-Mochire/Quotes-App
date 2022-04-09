@@ -11,7 +11,7 @@ export class FormComponent implements OnInit {
   @Output() onQuoteCreated = new EventEmitter<Quote>();
 
   onAddQuote(form: NgForm){
-    let addedQuote  = new Quote(form.value.message, form.value.quoteAuthor, 0, 0)
+    let addedQuote  = new Quote(form.value.message, form.value.quoteAuthor, form.value.userName, 0, 0)
 
     
     
