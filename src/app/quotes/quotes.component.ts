@@ -12,9 +12,19 @@ export class QuotesComponent implements OnInit {
 
   @Output() singleQuoteEmitter = new EventEmitter<Quote>();
 
-  onEmitSingleQuote(index: number){
+  onEmitQuoteDescription(index: number){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
-    // this.singleQuoteEmitter.emit(quote);
+  }
+
+  deleteQuote(isComplete: any,index: number){
+    if(isComplete){
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1);
+      }
+      
+    }
   }
 
   constructor() { }
