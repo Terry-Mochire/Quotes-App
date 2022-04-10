@@ -1,7 +1,24 @@
 <ul *ngFor="let quote of quotes; let i = index">
-    <li appHighlight>{{quote.quote}}</li>
+    <li>{{quote.quote}}</li>
     <button type="submit" class="btn btn-primary" (click)="onEmitQuoteDescription(i)">See More</button>
     <div *ngIf="quote.showDescription">
         <app-quote-details [newSingleQuote]="quote" (deleteQuote)="deleteQuote($event,i)"></app-quote-details>
     </div>
+
+    <!-- <div *ngIf="quote.upvote == highest; else doNotHighlight">
+        <li appHighlight>{{quote.quote}}</li>
+        <button type="submit" class="btn btn-primary" (click)="onEmitQuoteDescription(i)">See More</button>
+        <div *ngIf="quote.showDescription">
+            <app-quote-details [newSingleQuote]="quote" (deleteQuote)="deleteQuote($event,i)"></app-quote-details>
+        </div>
+    </div>
+    <ng-template #doNotHighlight>
+        <li>{{quote.quote}}</li>
+        <button type="submit" class="btn btn-primary" (click)="onEmitQuoteDescription(i)">See More</button>
+        <div *ngIf="quote.showDescription">
+            <app-quote-details [newSingleQuote]="quote" (deleteQuote)="deleteQuote($event,i)"></app-quote-details>
+        </div>
+    </ng-template> -->
+    
+
 </ul>

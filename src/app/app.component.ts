@@ -13,5 +13,4 @@ export class AppComponent {
     this.storedQuotes.push(quote)
   }
 
-
 }

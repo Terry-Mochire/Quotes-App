@@ -13,6 +13,7 @@ export class FormComponent implements OnInit {
   onAddQuote(form: NgForm){
     let addedQuote  = new Quote(form.value.message, form.value.quoteAuthor, form.value.userName, 0, 0)
 
+    console.log(addedQuote);
     
     
     this.onQuoteCreated.emit(addedQuote);
