@@ -19,10 +19,8 @@ export class QuoteDetailsComponent implements OnInit {
     likes = this.newSingleQuote.upvote ++;
     return likes;
   }
-  // @Output() newNumberOfLikes = new EventEmitter<>();
-  // changeNumberofLikes(){
-  //   this.newNumberOfLikes.emit()
-  // }
+
+  
   
     
   addDislike(dislikes: number){
