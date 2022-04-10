@@ -7,6 +7,9 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
   @Input() quotes: Quote[]=[
+    new Quote("Today is your opportunity to build the tomorrow you want ", "Ken Poirot", "Terry Mochire", 0, 0),
+    new Quote("Find your way Back, come home.", "Beyonce", "Terry Mochire", 0, 0),
+    new Quote("Be Afraid but do it Anyway!", "Terry Mochire", "Terry Mochire", 0,0)
 
   ]
 
@@ -38,7 +41,9 @@ export class QuotesComponent implements OnInit {
 
   for(this.count=0 ; this.count < this.quotes.length; this.count++) {
     this.last = this.quotes[this.count].upvote;
-    if(this.last > this.first){this.first = this.last}
+    if(this.last > this.first){
+      this.first = this.last
+    }
   }
   return  this.first
 }
