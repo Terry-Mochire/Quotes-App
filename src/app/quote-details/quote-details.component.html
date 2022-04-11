@@ -1,6 +1,0 @@
-<p style="float: right;">Author: {{newSingleQuote.quoteAuthor}}</p> <br>
-<p >Created by: {{newSingleQuote.userName}}</p>
-<p>This Quote was generated {{newSingleQuote.creationTime|timeCount}} minutes ago</p>
-<button type="submit" class="btn btn-primary" (click)="addLike(0)">Like <span>{{newSingleQuote.upvote}}</span></button>
-<button type="submit" class="btn btn-primary" (click)="addDislike(0)">Dislike <span>{{newSingleQuote.downvote}}</span></button>
-<button (click)="delete(true)" class="btn btn-outline-danger">Delete</button>
