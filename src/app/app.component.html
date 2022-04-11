@@ -8,13 +8,13 @@
 </head>
 <body>
   <div class="container">
-    <h2 class="text-center mt-4">Quotes App</h2>
+    <h1 class="text-center mt-4">Quotes App</h1>
     <div class="row mt-4">
-      <div class="col-md-8">
+      <div class="col-md-6 quotes">
         <h5>My Quotes</h5>
         <app-quotes [quotes] = "storedQuotes"></app-quotes>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6 form">
         <h5>Add New Quotes</h5>
         <app-form (onQuoteCreated) = onQuoteAdded($event)></app-form>
       </div>
