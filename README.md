@@ -1,6 +1,6 @@
 # Quotes-App
 
-<img src="../assets/Screenshot 2022-04-11 at 04.17.46" width="100%" height="100%">
+<img src="./assets/Screenshot 2022-04-11 at 04.17.46" width="100%" height="100%">
 
 ### Description
 This project is to create an application where users can create quotes and have have those quotes voted on whether they are terrible or are inspirational. This is a practice project to better understand the concepts in Angular.
